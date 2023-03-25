@@ -1,0 +1,50 @@
+.peopleContainer {
+  width: 100%;
+}
+
+.topBar {
+  padding: 20px;
+}
+
+.titleDiv {
+  column-gap: 10px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.addButton {
+  border: none;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  font-size: 20px;
+  background: #000000;
+  border-radius: 5px;
+}
+
+.searchDiv {
+  column-gap: 10px;
+}
+
+.searchBox {
+  background: #f6f6f6;
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  column-gap: 7px;
+}
+
+.searchBox input {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.filterButton {
+  background: #f6f6f6;
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+}
