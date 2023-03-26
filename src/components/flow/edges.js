@@ -1,4 +1,4 @@
-export default [
+export const edges = [
   {
     id: '1-2',
     source: '1',

@@ -6,7 +6,7 @@ import ProfileImage5 from '../../assets/avatars/ProfileImage5.png';
 import ProfileImage6 from '../../assets/avatars/ProfileImage6.png';
 import ProfileImage7 from '../../assets/avatars/ProfileImage7.png';
 
-export default [
+export const nodes = [
   {
     id: '1',
     data: {

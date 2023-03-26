@@ -1,8 +1,8 @@
 import './style.css';
-import ReactFlow, { Controls, Background } from 'reactflow';
+import ReactFlow, { Controls } from 'reactflow';
 import 'reactflow/dist/style.css';
-import edges from './edges';
-import nodes from './nodes';
+import { edges } from './edges';
+import { nodes } from './nodes';
 import CustomNode from './customNode';
 import { useMemo } from 'react';
 
