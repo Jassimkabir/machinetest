@@ -1,5 +1,6 @@
 import { Handle, Position } from 'reactflow';
 import './style.css';
+import Retail from '../../assets/Retail.svg';
 
 const CustomNode = ({ data }) => {
   return (
@@ -15,6 +16,12 @@ const CustomNode = ({ data }) => {
           <div className='section w-100 d-flex flex-column justify-content-center align-items-center'>
             <span className='name'>{data?.name}</span>
             <span className='position'>{data?.position}</span>
+            {data?.additional && (
+              <div className='additionalDetail'>
+                <img src={Retail} alt='' />
+                <span>{data?.additional}</span>
+              </div>
+            )}
           </div>
         </div>
         <div className='avatar'>
