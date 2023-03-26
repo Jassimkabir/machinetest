@@ -60,12 +60,13 @@
   width: 128px;
   position: fixed;
   height: 41px;
-  background: rgba(106, 106, 106, 0.1);
+  background: #f0f0f0;
   border-radius: 6px;
   right: 20px;
   top: 100px;
   padding: 5px;
   display: flex;
+  z-index: 1;
 }
 
 .viewButton {

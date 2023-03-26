@@ -2,10 +2,11 @@ import SideBar from '../../components/sidebar';
 import './style.css';
 import Search from '../../assets/Search.svg';
 import Filter from '../../assets/Filter.svg';
-import Flow from '../../assets/Flow.svg';
+import FlowIcon from '../../assets/Flow.svg';
 import Grid from '../../assets/Grid.svg';
 import List from '../../assets/List.svg';
 import { useState } from 'react';
+import Flow from '../../components/flow';
 
 const People = () => {
   const [view, setView] = useState('flow');
@@ -47,10 +48,22 @@ const People = () => {
             className={`viewButton ${view === 'flow' && 'activeButton'}`}
             onClick={() => setView('flow')}
           >
-            <img src={Flow} alt='flow' />
+            <img src={FlowIcon} alt='flow' />
           </button>
         </div>
-        <div>This is where the React Flow goes!!</div>
+        {view === 'flow' && <Flow />}
+        {(view === 'grid' || view === 'list') && (
+          <div
+            style={{ height: '89%' }}
+            className='d-flex justify-content-center align-items-center'
+          >
+            <h1>
+              {view === 'grid'
+                ? 'Grid view not available!'
+                : 'List view not available!'}
+            </h1>
+          </div>
+        )}
       </div>
     </div>
   );
