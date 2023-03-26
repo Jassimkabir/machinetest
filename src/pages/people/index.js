@@ -1,8 +1,15 @@
 import SideBar from '../../components/sidebar';
 import './style.css';
 import Search from '../../assets/Search.svg';
+import Filter from '../../assets/Filter.svg';
+import Flow from '../../assets/Flow.svg';
+import Grid from '../../assets/Grid.svg';
+import List from '../../assets/List.svg';
+import { useState } from 'react';
 
 const People = () => {
+  const [view, setView] = useState('flow');
+
   return (
     <div className='d-flex'>
       <SideBar />
@@ -17,9 +24,33 @@ const People = () => {
               <img src={Search} alt='' />
               <input className='h-20' type='text' placeholder='Search' />
             </div>
-            <button className='filterButton p-1'>Filter</button>
+            <button className='filterButton p-1 d-flex align-items-center'>
+              <img src={Filter} alt='' />
+              Filter
+            </button>
           </div>
         </div>
+        <div className='viewsToggleDiv'>
+          <button
+            className={`viewButton ${view === 'list' && 'activeButton'}`}
+            onClick={() => setView('list')}
+          >
+            <img src={List} alt='list' />
+          </button>
+          <button
+            className={`viewButton ${view === 'grid' && 'activeButton'}`}
+            onClick={() => setView('grid')}
+          >
+            <img src={Grid} alt='grid' />
+          </button>
+          <button
+            className={`viewButton ${view === 'flow' && 'activeButton'}`}
+            onClick={() => setView('flow')}
+          >
+            <img src={Flow} alt='flow' />
+          </button>
+        </div>
+        <div>This is where the React Flow goes!!</div>
       </div>
     </div>
   );
