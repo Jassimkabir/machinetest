@@ -2,7 +2,6 @@ import { Handle, Position } from 'reactflow';
 import './style.css';
 
 const CustomNode = ({ data }) => {
-  console.log(data);
   return (
     <>
       <Handle
